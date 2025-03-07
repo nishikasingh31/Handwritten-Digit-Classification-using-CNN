@@ -1,4 +1,4 @@
-I implemented the project using Python with TensorFlow and Keras for building the CNN model. The dataset used was MNIST, which consists of 28x28 grayscale images of handwritten digits (0-9). The approach involved:
+The project is implemented using Python with TensorFlow and Keras for building the CNN model. The dataset used was MNIST, which consists of 28x28 grayscale images of handwritten digits (0-9). The approach involved:
 
 Data Preprocessing: Normalization and reshaping of images for better model performance.
 Model Architecture: Designed a CNN with multiple convolutional and pooling layers, followed by fully connected layers for classification.
