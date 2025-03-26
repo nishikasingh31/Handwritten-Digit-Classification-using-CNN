@@ -12,4 +12,5 @@ Training and Optimization: Used cross-entropy loss and Adam optimizer for effici
 Evaluation: Assessed accuracy and loss using test data and experimented with dropout layers to prevent overfitting.
 
 The final model achieved over 98% accuracy on the test set. This project deepened my understanding of deep learning, CNNs, and model optimization. It also gave me hands-on experience with TensorFlow, which is crucial for AI and ML applications.
+
 [cnn.pdf](https://github.com/user-attachments/files/19464876/cnn.pdf)
