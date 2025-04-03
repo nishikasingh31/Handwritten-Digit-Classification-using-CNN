@@ -14,3 +14,4 @@ Evaluation: Assessed accuracy and loss using test data and experimented with dro
 The final model achieved over 98% accuracy on the test set. This project deepened my understanding of deep learning, CNNs, and model optimization. It also gave me hands-on experience with TensorFlow, which is crucial for AI and ML applications.
 
 [cnn.pdf](https://github.com/user-attachments/files/19464876/cnn.pdf)
+https://nishikasingh31-handwritten-digit-classification-using-cnn.streamlit.app/
