@@ -1,9 +1,12 @@
+import base64
 import streamlit as st
+from gtts import gTTS
 import numpy as np
 from PIL import Image
 from tensorflow.keras.models import load_model # type: ignore
 import matplotlib.pyplot as plt
 import os
+import io
 
 
 st.set_page_config(
@@ -36,6 +39,11 @@ with st.sidebar:
     - **Input**: Single digit (0-9) images
     """)
 
+st.markdown("""
+<style>
+.audio-hidden { visibility: hidden; height: 0px; }
+</style>
+""", unsafe_allow_html=True)
 
 def preprocess_image(uploaded_image):
     """Convert uploaded image to MNIST format"""
@@ -85,5 +93,27 @@ if uploaded_file and model:
                 with col3:
                     st.markdown('<h3 style="font-size:18px;">Results</h3>', unsafe_allow_html=True)
                     st.metric("Predicted Digit", digit)
+                tts = gTTS(text=f"The predicted digit is {digit}", lang='en')
+                audio_bytes = io.BytesIO()
+                tts.write_to_fp(audio_bytes)
+                audio_bytes.seek(0)
+                # Convert to base64
+                audio_base64 = base64.b64encode(audio_bytes.read()).decode('utf-8')
+                
+                # Auto-play implementation
+                st.markdown(f"""
+                <iframe src="data:audio/mp3;base64,{audio_base64}" 
+                        allow="autoplay" 
+                        class="audio-hidden"
+                        id="audio_iframe">
+                </iframe>
+                
+                <script>
+                document.getElementById('audio_iframe').addEventListener('load', function() {{
+                    this.contentWindow.postMessage('{{"method":"play"}}', '*');
+                }});
+                </script>
+                """, unsafe_allow_html=True)
+
             except Exception as e:
                 st.error(f"Prediction failed: {str(e)}")
