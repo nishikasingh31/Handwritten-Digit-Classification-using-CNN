@@ -1,20 +1,67 @@
-# Handwritten-Digit-Classification-using-CNN
-Handwritten Digit Classification is a deep learning project using Convolutional Neural Networks to recognize handwritten digits. It is Trained and Tested on the MNIST dataset. The model's seven-layer architecture ensures high accuracy in digit recognition.
+# Handwritten Digit Classification Using CNN
 
-The project is implemented using Python with TensorFlow and Keras for building the CNN model. The dataset used was MNIST, which consists of 28x28 grayscale images of handwritten digits (0-9). The approach involved:
+This project demonstrates a **Convolutional Neural Network (CNN)** trained on the **MNIST dataset** to classify handwritten digits.  
+It features an interactive **Streamlit web application**, allowing users to draw digits and get real-time predictions.
 
-Data Preprocessing: Normalization and reshaping of images for better model performance.
+## 🚀 Features
 
-Model Architecture: Designed a CNN with multiple convolutional and pooling layers, followed by fully connected layers for classification.
+- High accuracy digit classification on MNIST dataset.  
+- Interactive Streamlit GUI for drawing and predicting digits.  
+- Model training, saving, and loading for inference.  
+- Easy deployment via Streamlit Cloud.
 
-Training and Optimization: Used cross-entropy loss and Adam optimizer for efficient learning.
+## 🛠️ Tech Stack
 
-Evaluation: Assessed accuracy and loss using test data and experimented with dropout layers to prevent overfitting.
+- **Programming Language:** Python  
+- **Deep Learning Framework:** TensorFlow, Keras  
+- **Web Framework:** Streamlit  
+- **Dataset:** MNIST  
 
-The final model achieved over 98% accuracy on the test set. This project deepened my understanding of deep learning, CNNs, and model optimization. It also gave me hands-on experience with TensorFlow, which is crucial for AI and ML applications.
+## 📈 Model Performance
 
+The CNN model was trained on the MNIST dataset and achieves:
+
+- **Training Accuracy:** 99.3%  
+- **Test Accuracy:** 99.1%  
+
+This demonstrates the model’s high reliability in classifying handwritten digits.
+
+## 🧪 Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/nishikasingh31/Handwritten-Digit-Classification-using-CNN.git
+cd Handwritten-Digit-Classification-using-CNN
+```
+2. Install Dependencies
+```bash
+Copy code
+pip install -r requirements.txt
+```
+3. Train the Model
+```bash
+Copy code
+python src/main.py
+```
+-Loads and preprocesses MNIST dataset. <br>
+-Defines and trains the CNN model. <br>
+-Evaluates performance and saves the trained model to model/model.h5. <br>
+
+4. Run the Streamlit App
+```bash
+Copy code
+streamlit run src/app.py
+```
+-Opens a browser window with the app. <br>
+-Draw digits on the canvas and get predictions instantly. 
+
+## 📊 Example
 [cnn.pdf](https://github.com/user-attachments/files/19464876/cnn.pdf)
 
-https://github.com/user-attachments/assets/4582168a-db5e-4b27-a38b-8bcbd789a75d
+## 🌐 Live Demo
+Try the live Streamlit app here: <br>
+[Handwritten Digit Classification App](https://nishikasingh31-handwritten-digit-classification-using-cnn.streamlit.app/) <br>
 
-https://nishikasingh31-handwritten-digit-classification-using-cnn.streamlit.app/
+[Project Demo](https://github.com/user-attachments/assets/4582168a-db5e-4b27-a38b-8bcbd789a75d)
+
+
