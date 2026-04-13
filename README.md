@@ -43,17 +43,17 @@ pip install -r requirements.txt
 Copy code
 python src/main.py
 ```
--Loads and preprocesses MNIST dataset. <br>
--Defines and trains the CNN model. <br>
--Evaluates performance and saves the trained model to model/model.h5. <br>
+- Loads and preprocesses MNIST dataset. <br>
+- Defines and trains the CNN model. <br>
+- Evaluates performance and saves the trained model to model/model.h5. <br>
 
 4. Run the Streamlit App
 ```bash
 Copy code
 streamlit run src/app.py
 ```
--Opens a browser window with the app. <br>
--Draw digits on the canvas and get predictions instantly. 
+- Opens a browser window with the app. <br>
+- Draw digits on the canvas and get predictions instantly. 
 
 ## 📊 Example
 [cnn.pdf](https://github.com/user-attachments/files/19464876/cnn.pdf)
